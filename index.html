@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PANDA - Polizeiliche Analyse Nichtmenschlicher Digitaler Artefakte</title>
+    <link rel="icon" type="image/x-icon" href="assets/logo-panda-white.ico">
+    <link rel="icon" type="image/png" href="assets/logo-panda-white.png">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="animated-background"></div>
+    
+    <div class="app-container">
+        <div id="app-content">
+            <!-- screens -->
+        </div>
+    </div>
+
+    <script>
+        // Rechtecke generieren 
+        const background = document.querySelector('.animated-background');
+        const numRectangles = 3;
+        
+        for (let i = 0; i < numRectangles; i++) {
+            const rect = document.createElement('div');
+            rect.className = 'falling-rectangle';
+            
+            // Zufällige horizontale Position zwischen 10% und 90%
+            const leftPosition = Math.random() * 80 + 10;
+            rect.style.left = leftPosition + '%';
+            
+            // Gestaffelte Verzögerung, sodass nicht alle gleichzeitig laufen
+            const delay = i * 4;
+            rect.style.animationDelay = delay + 's';
+            
+            // Zufällige Dauer zwischen 9 und 12 Sekunden
+            const duration = Math.random() * 3 + 9;
+            rect.style.animationDuration = duration + 's';
+            
+            background.appendChild(rect);
+        }
+    </script>
+    <script src="js/app-bundle.js"></script>
+</body>
+</html>
