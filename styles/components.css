@@ -46,17 +46,12 @@
     border: 2px solid var(--pastel-green);
     color: var(--dark-text);
 }
-.rounded-button.option:hover {
-    background: var(--pastel-mint);
-    border-color: var(--pastel-green);
-}
-/*resetted focus button auf weiß -> mobile fix*/
-.rounded-button.option:focus {
-    background: var(--white);
-    outline: none;
-}
-.rounded-button.option:active {
-    background: var(--pastel-mint);
+/*hover nur auf desktop, nicht mobile -> fixt sticky hover*/
+@media (hover: hover) {
+    .rounded-button.option:hover {
+        background: var(--pastel-mint);
+        border-color: var(--pastel-green);
+    }
 }
 /* ja = grün */
 .rounded-button.yes {
@@ -160,4 +155,5 @@
     width: 24px;
     border-radius: 4px;
 }
+
 
