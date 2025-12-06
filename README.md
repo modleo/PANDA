@@ -4,14 +4,13 @@ Ein modernes Web-Tool zur Unterstützung von Polizeibeamten bei der Erkennung KI
 
 ## Features
 
-- Modernes, iOS-inspiriertes Design mit Pastel-Grün (#A8E6CF)
+- Modernes Design 
 - Vollständig responsive (Mobile & Desktop)
 - Interaktiver Entscheidungsbaum
 - Tipps zur Erkennung von KI-generierten Inhalten
 - Automatische rechtliche Einordnung nach StGB
-- Animierter Hintergrund mit Farbverlauf und fallenden Rechtecken
-- Vollständig runde (Pill-shaped) Buttons
-- Favicon und Logo-Integration (SVG mit PNG-Fallback)
+- Animierter Hintergrund
+- eigenes Logo
 
 ## Inhaltstypen
 
@@ -66,8 +65,8 @@ PANDA/
 
 ### Animationen
 - **Gradient:** 45s Farbverlauf im Hintergrund
-- **Fallende Rechtecke:** Maximal 3 gleichzeitig, zufällige Positionen, 9-12s Dauer
-- **Screen-Transitions:** Fade-in/Fade-out zwischen Screens (300ms)
+- **Fallende Rechtecke:** Hintergrundanimation
+- **Screen-Transitions:** Fade-in/Fade-out zwischen Screens
 - **Button-Animationen** Hover mit Schattenwurf und Klick mit Feedback
 
 ### Responsive Design
@@ -86,7 +85,7 @@ In Adobe Illustrator erstellt in weiß und schwarz für unterschiedliche Hinterg
 
 ## Technologien
 - **JavaScript** für die Logik
-- **CSS3** mit Custom Properties, Animationen, Backdrop-Filter
+- **CSS3** mit Custom Properties und Animationen
 - **Responsive Design** (Flexbox, Media Queries)
 - **Single-Page Application** (SPA) ohne Framework
 
@@ -248,5 +247,6 @@ Dieses Tool dient als Unterstützung und ersetzt keine rechtliche Beratung oder 
 ## Lizenz
 
 Für den internen Gebrauch in Polizeibehörden.
+
 
 
