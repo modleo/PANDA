@@ -182,18 +182,7 @@ class DecisionLogic {
                     }
                 } else if (answers.audioType === 'grandparent_scam') {
                     // Enkeltrick/Schockanruf
-                    laws.push({
-                        title: '§ 263 StGB - Betrug',
-                        description: 'Täuschung über Notlagen von Familienangehörigen zur Erlangung von Geld oder Wertsachen.'
-                    });
-                    laws.push({
-                        title: '§ 253 StGB - Erpressung',
-                        description: 'Falls Drohungen ausgesprochen wurden, um Vermögensverfügungen zu erzwingen.'
-                    });
-                }
-
-                // Versuch oder vollendet
-                if (answers.moneyPaid === true) {
+                    if (answers.moneyPaid === true) {
                         laws.push({
                             title: '§ 263 StGB - Betrug',
                             description: 'Täuschung über Notlagen von Familienangehörigen zur Erlangung von Geld oder Wertsachen.'
@@ -1084,4 +1073,5 @@ document.addEventListener('DOMContentLoaded', () => {
     const app = new PandaApp();
     app.start();
 });
+
 
