@@ -169,10 +169,17 @@ class DecisionLogic {
                         title: '§ 132 StGB - Amtsanmaßung',
                         description: 'Unbefugte Vornahme einer Handlung, welche nur kraft eines öffentlichen Amtes vorgenommen werden darf.'
                     });
-                    laws.push({
-                        title: '§ 263 StGB - Betrug',
-                        description: 'Täuschung über die Identität als Amtsperson zur Erlangung von Vermögensvorteilen.'
-                    });
+                    if (answers.moneyPaid === true) {
+                        laws.push({
+                            title: '§ 263 StGB - Betrug',
+                            description: 'Täuschung über die Identität als Amtsperson zur Erlangung von Vermögensvorteilen.'
+                        });
+                    } else if (answers.moneyPaid === false) {
+                        laws.push({
+                            title: '§ 263 StGB - Betrug (Versuch)',
+                            description: 'Versuchter Betrug. Täuschung über die Identität als Amtsperson zur Erlangung von Vermögensvorteilen.'
+                        });
+                    }
                 } else if (answers.audioType === 'grandparent_scam') {
                     // Enkeltrick/Schockanruf
                     laws.push({
@@ -187,15 +194,24 @@ class DecisionLogic {
 
                 // Versuch oder vollendet
                 if (answers.moneyPaid === true) {
-                    laws.push({
-                        title: '§ 263 StGB - Betrug (vollendet)',
-                        description: 'Der Betrug ist vollendet, da es zu einer Vermögensschädigung gekommen ist.'
-                    });
-                } else if (answers.moneyPaid === false) {
-                    laws.push({
-                        title: '§ 263 StGB - Betrug (Versuch)',
-                        description: 'Versuchter Betrug, aber Vermögensschaden wurde verhindert.'
-                    });
+                        laws.push({
+                            title: '§ 263 StGB - Betrug',
+                            description: 'Täuschung über Notlagen von Familienangehörigen zur Erlangung von Geld oder Wertsachen.'
+                        });
+                        laws.push({
+                            title: '§ 253 StGB - Erpressung',
+                            description: 'Falls Drohungen ausgesprochen wurden, um Vermögensverfügungen zu erzwingen.'
+                        });
+                    } else if (answers.moneyPaid === false) {
+                        laws.push({
+                            title: '§ 263 StGB - Betrug (Versuch)',
+                            description: 'Versuchter Betrug bei Täuschung über Notlagen von Familienangehörigen zur Erlangung von Geld oder Wertsachen.'
+                        });
+                        laws.push({
+                            title: '§ 253 StGB - Erpressung (Versuch)',
+                            description: 'Versuchte Erpressung. Falls Drohungen ausgesprochen wurden, um Vermögensverfügungen zu erzwingen.'
+                        });
+                    }
                 }
             }
 
@@ -1068,3 +1084,4 @@ document.addEventListener('DOMContentLoaded', () => {
     const app = new PandaApp();
     app.start();
 });
+
