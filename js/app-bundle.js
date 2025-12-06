@@ -1073,5 +1073,3 @@ document.addEventListener('DOMContentLoaded', () => {
     const app = new PandaApp();
     app.start();
 });
-
-
