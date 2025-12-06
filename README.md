@@ -1,4 +1,4 @@
-# PANDA - KI-Erkennungstool für Polizeibehörden
+# PANDA - Polizeiliche Analyse Nichtmenschlicher Digitaler Artefakte
 
 Ein modernes Web-Tool zur Unterstützung von Polizeibeamten bei der Erkennung KI-generierter Inhalte und rechtlichen Einordnung.
 
@@ -246,3 +246,4 @@ Dieses Tool dient als Unterstützung und ersetzt keine rechtliche Beratung oder 
 ## Lizenz
 
 Für den internen Gebrauch in Polizeibehörden.
+
