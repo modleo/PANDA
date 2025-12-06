@@ -50,6 +50,14 @@
     background: var(--pastel-mint);
     border-color: var(--pastel-green);
 }
+/*resetted focus button auf weiß -> mobile fix*/
+.rounded-button.option:focus {
+    background: var(--white);
+    outline: none;
+}
+.rounded-button.option:active {
+    background: var(--pastel-mint);
+}
 /* ja = grün */
 .rounded-button.yes {
     background: linear-gradient(135deg, var(--pastel-green), var(--pastel-mint));
@@ -152,3 +160,4 @@
     width: 24px;
     border-radius: 4px;
 }
+
