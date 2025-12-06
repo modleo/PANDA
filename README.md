@@ -24,11 +24,11 @@ Das Tool unterstützt die Bewertung von:
 
 ```
 PANDA/
-├── index.html              # Haupt-HTML-Datei mit Favicon & Rechteck-Animation
+├── index.html              # HTML
 ├── styles/
-│   ├── main.css           # Haupt-Styling (Layout, Hintergrund, Gradient)
-│   ├── components.css     # Button- und Komponenten-Styles (rounded buttons)
-│   └── animations.css     # Animationen (fadeIn, fadeOut, fallDown)
+│   ├── main.css           # Styling
+│   ├── components.css     # Komponentenstyling
+│   └── animations.css     # Animationen
 ├── js/
 │   └── app-bundle.js                # Komplette gebündelte App-Logik
 │       ├── AppState                 # State-Management (answers, history, progress)
@@ -47,13 +47,15 @@ PANDA/
 │           ├── AudioTypeScreen
 │           ├── MoneyPaidScreen
 │           └── ResultScreen
-└── assets/
-    ├── logo-panda.svg          # Haupt-Logo (SVG)
-    ├── logo-panda.png          # Logo Fallback (PNG)
-    ├── logo-panda-white.svg    # Weiße Logo-Variante (SVG)
-    ├── logo-panda-white.png    # Weiße Logo-Variante (PNG)
-    └── logo-panda.ico          # Favicon
-    └── logo-panda-white.ico    # Weiße Favicon-Variante
+├── assets/
+|   ├── logo-panda.svg          # Haupt-Logo (SVG)
+|   ├── logo-panda.png          # Logo Fallback (PNG)
+|   ├── logo-panda-white.svg    # Weiße Logo-Variante (SVG)
+|   ├── logo-panda-white.png    # Weiße Logo-Variante (PNG)
+|   └── logo-panda.ico          # Favicon
+|   └── logo-panda-white.ico    # Weiße Favicon-Variante
+├── favicon.ico         # Favicon
+└── readme.md           # Readme-Datei
 ```
 
 ## Design & UI
@@ -246,4 +248,5 @@ Dieses Tool dient als Unterstützung und ersetzt keine rechtliche Beratung oder 
 ## Lizenz
 
 Für den internen Gebrauch in Polizeibehörden.
+
 
