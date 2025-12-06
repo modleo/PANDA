@@ -204,7 +204,7 @@ In Adobe Illustrator erstellt in weiß und schwarz für unterschiedliche Hinterg
 
 **Pfad 17: Falscher Polizeibeamter mit Schaden**
 - Ton → KI: Ja → Phänomen: Falscher Polizeibeamter → Geld bezahlt: Ja
-- **Ergebnis:** § 132 StGB - Amtsanmaßung, § 263 StGB - Betrug (vollendet)
+- **Ergebnis:** § 132 StGB - Amtsanmaßung, § 263 StGB - Betrug 
 
 **Pfad 18: Falscher Polizeibeamter ohne Schaden**
 - Ton → KI: Ja → Phänomen: Falscher Polizeibeamter → Geld bezahlt: Nein
@@ -212,11 +212,11 @@ In Adobe Illustrator erstellt in weiß und schwarz für unterschiedliche Hinterg
 
 **Pfad 19: Enkeltrick mit Schaden**
 - Ton → KI: Ja → Phänomen: Enkeltrick/Schockanruf → Geld bezahlt: Ja
-- **Ergebnis:** § 263 StGB - Betrug (vollendet), § 253 StGB - Erpressung
+- **Ergebnis:** § 263 StGB - Betrug, § 253 StGB - Erpressung
 
 **Pfad 20: Enkeltrick ohne Schaden**
 - Ton → KI: Ja → Phänomen: Enkeltrick/Schockanruf → Geld bezahlt: Nein
-- **Ergebnis:** § 263 StGB - Betrug (Versuch), § 253 StGB - Erpressung
+- **Ergebnis:** § 263 StGB - Betrug (Versuch), § 253 StGB - Erpressung (Versuch)
 
 #### Ohne KI generiert = NEIN
 
@@ -247,6 +247,7 @@ Dieses Tool dient als Unterstützung und ersetzt keine rechtliche Beratung oder 
 ## Lizenz
 
 Für den internen Gebrauch in Polizeibehörden.
+
 
 
 
