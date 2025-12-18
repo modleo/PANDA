@@ -113,19 +113,25 @@ In Adobe Illustrator erstellt in weiß und schwarz für unterschiedliche Hinterg
 
 **Pfad 2: Erpressung / Sextortion**
 - E-Mail → KI: Ja → Inhalt: Erpressung
-- **Ergebnis:** 
+- **Ergebnis bei Erfolg (Geld gezahlt):** 
   - § 253 StGB - Erpressung
   - § 201a StGB - Verletzung des höchstpersönlichen Lebensbereichs (Sextortion)
   - § 201 StGB - Verletzung der Vertraulichkeit des Wortes
   - § 184 StGB - Verbreitung pornografischer Inhalte (falls veröffentlicht)
+- **Ergebnis ohne Erfolg (kein Geld gezahlt):**
+  - § 253 StGB - Erpressung (Versuch)
+  - (weitere Delikte wie oben)
 
 **Pfad 3: Phishing-Link**
 - E-Mail → KI: Ja → Inhalt: Link (Phishing)
-- **Ergebnis:** 
+- **Ergebnis bei Erfolg (Geld gezahlt):** 
   - § 263a StGB - Computerbetrug
   - § 202a StGB - Ausspähen von Daten
   - § 202b StGB - Abfangen von Daten
   - § 269 StGB - Fälschung beweiserheblicher Daten
+- **Ergebnis ohne Erfolg (kein Geld gezahlt):**
+  - § 263a StGB - Computerbetrug (Versuch)
+  - (weitere Delikte wie oben)
 
 #### Ohne KI generiert = NEIN
 **Pfad 4: Bedrohung (nicht KI)**
@@ -134,19 +140,25 @@ In Adobe Illustrator erstellt in weiß und schwarz für unterschiedliche Hinterg
 
 **Pfad 5: Erpressung / Sextortion (nicht KI)**
 - E-Mail → KI: Nein → Inhalt: Erpressung
-- **Ergebnis:** 
+- **Ergebnis bei Erfolg (Geld gezahlt):** 
   - § 253 StGB - Erpressung
   - § 201a StGB - Verletzung des höchstpersönlichen Lebensbereichs (Sextortion)
   - § 201 StGB - Verletzung der Vertraulichkeit des Wortes
   - § 184 StGB - Verbreitung pornografischer Inhalte (falls veröffentlicht)
+- **Ergebnis ohne Erfolg (kein Geld gezahlt):**
+  - § 253 StGB - Erpressung (Versuch)
+  - (weitere Delikte wie oben)
 
 **Pfad 6: Phishing-Link (nicht KI)**
 - E-Mail → KI: Nein → Inhalt: Link (Phishing)
-- **Ergebnis:** 
+- **Ergebnis bei Erfolg (Geld gezahlt):** 
   - § 263a StGB - Computerbetrug
   - § 202a StGB - Ausspähen von Daten
   - § 202b StGB - Abfangen von Daten
   - § 269 StGB - Fälschung beweiserheblicher Daten
+- **Ergebnis ohne Erfolg (kein Geld gezahlt):**
+  - § 263a StGB - Computerbetrug (Versuch)
+  - (weitere Delikte wie oben)
 
 ---
 
