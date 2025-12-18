@@ -124,10 +124,17 @@ class DecisionLogic {
                     });
                 } else if (answers.emailContent === 'extortion') {
                     // Erpressung / Sextortion
-                    laws.push({
-                        title: '§ 253 StGB - Erpressung',
-                        description: 'Nötigung zu einer Vermögensverfügung durch Gewalt oder Drohung.'
-                    });
+                    if (answers.moneyPaid === true) {
+                        laws.push({
+                            title: '§ 253 StGB - Erpressung',
+                            description: 'Nötigung zu einer Vermögensverfügung durch Gewalt oder Drohung.'
+                        });
+                    } else {
+                        laws.push({
+                            title: '§ 253 StGB - Erpressung (Versuch)',
+                            description: 'Versuchte Nötigung zu einer Vermögensverfügung durch Gewalt oder Drohung.'
+                        });
+                    }
                     laws.push({
                         title: '§ 201a StGB - Verletzung des höchstpersönlichen Lebensbereichs',
                         description: 'Bei Sextortion: Drohung mit Veröffentlichung intimer Aufnahmen, die geeignet sind, dem Ansehen erheblich zu schaden.'
@@ -142,10 +149,17 @@ class DecisionLogic {
                     });
                 } else if (answers.emailContent === 'link') {
                     // Phishing
-                    laws.push({
-                        title: '§ 263a StGB - Computerbetrug',
-                        description: 'Unbefugte Verwendung von Daten mit der Absicht, sich oder einem Dritten einen rechtswidrigen Vermögensvorteil zu verschaffen.'
-                    });
+                    if (answers.moneyPaid === true) {
+                        laws.push({
+                            title: '§ 263a StGB - Computerbetrug',
+                            description: 'Unbefugte Verwendung von Daten mit der Absicht, sich oder einem Dritten einen rechtswidrigen Vermögensvorteil zu verschaffen.'
+                        });
+                    } else {
+                        laws.push({
+                            title: '§ 263a StGB - Computerbetrug (Versuch)',
+                            description: 'Versuchte unbefugte Verwendung von Daten mit der Absicht, sich oder einem Dritten einen rechtswidrigen Vermögensvorteil zu verschaffen.'
+                        });
+                    }
                     laws.push({
                         title: '§ 202a StGB - Ausspähen von Daten',
                         description: 'Verschaffung des Zugangs zu Daten, die gegen unberechtigten Zugang besonders gesichert sind.'
@@ -256,10 +270,17 @@ class DecisionLogic {
                         description: 'Bedrohung mit der Begehung eines Verbrechens.'
                     });
                 } else if (answers.emailContent === 'extortion') {
-                    laws.push({
-                        title: '§ 253 StGB - Erpressung',
-                        description: 'Erpressung durch Drohung mit einem empfindlichen Übel.'
-                    });
+                    if (answers.moneyPaid === true) {
+                        laws.push({
+                            title: '§ 253 StGB - Erpressung',
+                            description: 'Erpressung durch Drohung mit einem empfindlichen Übel.'
+                        });
+                    } else {
+                        laws.push({
+                            title: '§ 253 StGB - Erpressung (Versuch)',
+                            description: 'Versuchte Erpressung durch Drohung mit einem empfindlichen Übel.'
+                        });
+                    }
                     laws.push({
                         title: '§ 201a StGB - Verletzung des höchstpersönlichen Lebensbereichs',
                         description: 'Bei Sextortion: Drohung mit Veröffentlichung intimer Aufnahmen, die geeignet sind, dem Ansehen erheblich zu schaden.'
@@ -273,10 +294,17 @@ class DecisionLogic {
                         description: 'Bei Sextortion: Falls intime/pornografische Inhalte tatsächlich veröffentlicht wurden.'
                     });
                 } else if (answers.emailContent === 'link') {
-                    laws.push({
-                        title: '§ 263a StGB - Computerbetrug',
-                        description: 'Phishing-Versuch zur unbefugten Datenerlangung.'
-                    });
+                    if (answers.moneyPaid === true) {
+                        laws.push({
+                            title: '§ 263a StGB - Computerbetrug',
+                            description: 'Phishing-Versuch zur unbefugten Datenerlangung.'
+                        });
+                    } else {
+                        laws.push({
+                            title: '§ 263a StGB - Computerbetrug (Versuch)',
+                            description: 'Versuchter Computerbetrug zur unbefugten Datenerlangung.'
+                        });
+                    }
                     laws.push({
                         title: '§ 202a StGB - Ausspähen von Daten',
                         description: 'Versuch des unbefugten Zugangs zu geschützten Daten.'
@@ -607,11 +635,11 @@ class EmailContentScreen {
                 const emailContent = e.target.dataset.content;
                 state.setAnswer('emailContent', emailContent);
                 
-                // Erpressung braucht noch moneyPaid-Frage, Rest direkt zu Result
-                if (emailContent === 'extortion') {
-                    navigation.navigateTo('moneyPaid');
-                } else {
+                // Bedrohung direkt zu Result, andere zu moneyPaid
+                if (emailContent === 'threat') {
                     navigation.navigateTo('result', { answers: state.answers });
+                } else {
+                    navigation.navigateTo('moneyPaid');
                 }
             });
         });
